@@ -132,7 +132,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bA-aq-cKD">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bA-aq-cKD" customClass="FBSDKLoginButton">
                                         <rect key="frame" x="162" y="0.0" width="110" height="44"/>
                                         <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -223,8 +223,11 @@
                     <connections>
                         <outlet property="LoginToggle" destination="5b0-eG-Vhm" id="F42-wM-edg"/>
                         <outlet property="emailTextfield" destination="aad-Ez-GBF" id="why-pk-wFQ"/>
+                        <outlet property="fbSignin" destination="4bA-aq-cKD" id="BgI-Qb-ylx"/>
+                        <outlet property="ft" destination="4bA-aq-cKD" id="vo7-rs-1Fl"/>
                         <outlet property="passwordTextfield" destination="4f4-W1-UUA" id="6Up-5Q-wnz"/>
                         <segue destination="8DN-Ub-kda" kind="show" identifier="SignupToCode" id="7U1-6e-E89"/>
+                        <segue destination="2Db-ar-Wuo" kind="show" identifier="SignupToHabits" id="L6Y-60-Lyk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4s-rE-Dqb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -557,7 +560,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9E-Fh-7WH">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9E-Fh-7WH" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="233" y="724" width="110" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -627,6 +630,7 @@
                     <navigationItem key="navigationItem" id="w0z-ZY-YSL"/>
                     <connections>
                         <outlet property="emailTextfield" destination="Ifn-wQ-53v" id="5BI-8p-dgw"/>
+                        <outlet property="fbSignin" destination="N9E-Fh-7WH" id="dCT-U9-R2x"/>
                         <outlet property="passwordTextfield" destination="oyL-DD-Pkh" id="tLh-Aj-blH"/>
                         <segue destination="2Db-ar-Wuo" kind="show" identifier="LoginToHabits" id="WwT-Lu-01g"/>
                     </connections>

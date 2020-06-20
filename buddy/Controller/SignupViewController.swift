@@ -26,6 +26,16 @@ class SignupViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func loginButton(_ fbSignin: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+      if let error = error {
+        print(error.localizedDescription)
+        return
+      } else {
+        performSegue(withIdentifier: "SignupToHabits", sender: self)
+    }
+      // ...
+    }
+    
     @IBAction func signupPressed(_ sender: Any) {
         if let email = emailTextfield.text, let password = passwordTextfield.text{
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
