@@ -8,14 +8,18 @@
 
 import UIKit
 import Firebase
+import FBSDKLoginKit
 
 class SignupViewController: UIViewController {
+
+    
     
     @IBOutlet var emailTextfield: UITextField!
     @IBOutlet var passwordTextfield: UITextField!
     @IBOutlet weak var LoginToggle: UILabel!
-    
 
+    @IBOutlet weak var fbSignin: FBLoginButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
