@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vRY-B0-ATA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vRY-B0-ATA">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Carme-Regular.ttf">
+            <string>Carme</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -15,18 +20,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pa6-kD-ih6">
-                                <rect key="frame" x="123" y="446" width="168" height="66"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="45"/>
-                                <state key="normal" title="Sign up"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background Image" translatesAutoresizingMaskIntoConstraints="NO" id="39h-Ey-j0M">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pa6-kD-ih6">
+                                <rect key="frame" x="67" y="467" width="280" height="53"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Frk-s6-O1c"/>
+                                    <constraint firstAttribute="height" constant="53" id="frI-Nf-2Eu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="17"/>
+                                <state key="normal" title="SIGN UP">
+                                    <color key="titleColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="OOB-XC-z8C" kind="show" id="ldA-jV-t3k"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BJ-nh-MO1">
-                                <rect key="frame" x="139.66666666666666" y="350" width="134.99999999999997" height="66"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="45"/>
-                                <state key="normal" title="Log In"/>
+                                <rect key="frame" x="67" y="376" width="280" height="53"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="9eu-vc-zO4"/>
+                                    <constraint firstAttribute="height" constant="53" id="OCb-Ne-gdw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="17"/>
+                                <state key="normal" title="LOG IN">
+                                    <color key="titleColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="gvc-BU-dh7" kind="show" id="d1r-VA-oeV"/>
                                 </connections>
@@ -34,14 +57,24 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Pa6-kD-ih6" firstAttribute="top" secondItem="8BJ-nh-MO1" secondAttribute="bottom" constant="30" id="9EQ-pW-cDN"/>
+                            <constraint firstItem="Pa6-kD-ih6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="4cX-pf-vIx"/>
+                            <constraint firstItem="8BJ-nh-MO1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="5ou-of-eVw"/>
+                            <constraint firstItem="8BJ-nh-MO1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="288" id="DHp-UL-zzJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pa6-kD-ih6" secondAttribute="trailing" constant="67" id="LSy-x2-hhY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8BJ-nh-MO1" secondAttribute="trailing" constant="67" id="WL2-cB-JxQ"/>
                             <constraint firstItem="8BJ-nh-MO1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yjj-SG-3dy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pa6-kD-ih6" secondAttribute="bottom" constant="342" id="gUx-N6-7ea"/>
+                            <constraint firstItem="Pa6-kD-ih6" firstAttribute="top" secondItem="8BJ-nh-MO1" secondAttribute="bottom" constant="38" id="mfi-HV-SZA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pa6-kD-ih6" secondAttribute="bottom" constant="350" id="no7-DX-vxq"/>
                             <constraint firstItem="Pa6-kD-ih6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ouS-IP-PMe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="SkH-Ay-Jgl"/>
+                    <connections>
+                        <outlet property="loginButton" destination="8BJ-nh-MO1" id="pkJ-32-pNH"/>
+                        <outlet property="signupButton" destination="Pa6-kD-ih6" id="WCQ-HF-bK6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -368,10 +401,11 @@
             <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="plus" catalog="system" width="64" height="56"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="WwT-Lu-01g"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="Background Image" width="414" height="896"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
 </document>

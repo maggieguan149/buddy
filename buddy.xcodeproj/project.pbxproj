@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		333CF5FC249D9331006FC9FA /* Carme in Resources */ = {isa = PBXBuildFile; fileRef = 333CF5FB249D9331006FC9FA /* Carme */; };
 		9F021D25249D0013001E26AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F021D24249D0013001E26AA /* AppDelegate.swift */; };
 		9F021D27249D0013001E26AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F021D26249D0013001E26AA /* SceneDelegate.swift */; };
 		9F021D29249D0013001E26AA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F021D28249D0013001E26AA /* FirstViewController.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		2F54B819C2650C982E1EC32E /* Pods_buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		333CF5FB249D9331006FC9FA /* Carme */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carme; sourceTree = "<group>"; };
 		9F021D21249D0013001E26AA /* buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = buddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F021D24249D0013001E26AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F021D26249D0013001E26AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,9 +91,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		333CF5FA249D9327006FC9FA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				333CF5FB249D9331006FC9FA /* Carme */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		9F021D18249D0013001E26AA = {
 			isa = PBXGroup;
 			children = (
+				333CF5FA249D9327006FC9FA /* Fonts */,
 				9F021D23249D0013001E26AA /* buddy */,
 				9F021D22249D0013001E26AA /* Products */,
 				2250689A9216488BC8AE48DE /* Pods */,
@@ -226,6 +237,7 @@
 				9F021D31249D0018001E26AA /* Assets.xcassets in Resources */,
 				9F021D2C249D0013001E26AA /* Main.storyboard in Resources */,
 				9F021D3C249D0E3C001E26AA /* GoogleService-Info.plist in Resources */,
+				333CF5FC249D9331006FC9FA /* Carme in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
