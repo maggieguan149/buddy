@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vRY-B0-ATA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vRY-B0-ATA">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -103,8 +103,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5w-dm-t0k">
-                                <rect key="frame" x="66" y="556" width="280" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5w-dm-t0k">
+                                <rect key="frame" x="67" y="553" width="280" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="bRB-Vt-VOV"/>
+                                    <constraint firstAttribute="height" constant="53" id="mhL-iQ-CnB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="18"/>
                                 <state key="normal" title="SIGN UP" backgroundImage="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -113,32 +117,37 @@
                                     <action selector="signupPressed:" destination="OOB-XC-z8C" eventType="touchUpInside" id="Lek-jj-RNF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgV-2F-IGb">
-                                <rect key="frame" x="75" y="705" width="110" height="44"/>
-                                <color key="backgroundColor" red="0.85882352941176465" green="0.26666666666666666" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="XAt-YF-t2R"/>
-                                    <constraint firstAttribute="width" constant="110" id="aQl-DK-iQs"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="18"/>
-                                <state key="normal" title="Sign In">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bA-aq-cKD">
-                                <rect key="frame" x="237" y="705" width="110" height="44"/>
-                                <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="hI5-Kh-ftz"/>
-                                    <constraint firstAttribute="width" constant="110" id="pN3-Qv-Lh7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="18"/>
-                                <state key="normal" title="Sign In">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Already have an account? Log in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5b0-eG-Vhm">
-                                <rect key="frame" x="97.666666666666742" y="623" width="219" height="19"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="tnc-Lb-H16">
+                                <rect key="frame" x="71" y="705" width="272" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgV-2F-IGb">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="44"/>
+                                        <color key="backgroundColor" red="0.85882352941176465" green="0.26666666666666666" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="XAt-YF-t2R"/>
+                                            <constraint firstAttribute="width" constant="110" id="aQl-DK-iQs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="18"/>
+                                        <state key="normal" title="Sign In">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bA-aq-cKD">
+                                        <rect key="frame" x="162" y="0.0" width="110" height="44"/>
+                                        <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="hI5-Kh-ftz"/>
+                                            <constraint firstAttribute="width" constant="110" id="pN3-Qv-Lh7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="18"/>
+                                        <state key="normal" title="Sign In">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account? Log in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5b0-eG-Vhm">
+                                <rect key="frame" x="97.666666666666686" y="623" width="219" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="19" id="DMX-Sj-NRf"/>
                                 </constraints>
@@ -146,55 +155,67 @@
                                 <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a@b.com" borderStyle="roundedRect" adjustsFontSizeToFit="NO" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="atk-CA-pfc">
-                                <rect key="frame" x="76" y="295" width="263" height="34"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6gZ-V3-ZHW">
-                                <rect key="frame" x="76" y="382" width="263" height="33.999999999999943"/>
-                                <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQa-QL-EKg">
-                                <rect key="frame" x="76" y="355" width="83" height="19"/>
-                                <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="15"/>
-                                <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6i-t6-Z81">
-                                <rect key="frame" x="76" y="268" width="44" height="19"/>
-                                <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="15"/>
-                                <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LIb-mO-5rf">
-                                <rect key="frame" x="76" y="467" width="263" height="33.999999999999943"/>
-                                <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="CONFIRM PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yy-gU-gI9">
-                                <rect key="frame" x="75" y="440" width="163" height="19"/>
-                                <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="15"/>
-                                <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="a5h-S8-Hm0">
+                                <rect key="frame" x="76" y="295" width="262" height="204"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a@b.com" borderStyle="roundedRect" adjustsFontSizeToFit="NO" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="atk-CA-pfc">
+                                        <rect key="frame" x="0.0" y="0.0" width="262" height="34"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6gZ-V3-ZHW">
+                                        <rect key="frame" x="0.0" y="85" width="262" height="34"/>
+                                        <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LIb-mO-5rf">
+                                        <rect key="frame" x="0.0" y="170" width="262" height="34"/>
+                                        <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="67" translatesAutoresizingMaskIntoConstraints="NO" id="xYy-TG-JH3">
+                                <rect key="frame" x="75.999999999999986" y="268" width="151.66666666666663" height="189"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6i-t6-Z81">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="18.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="15"/>
+                                        <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQa-QL-EKg">
+                                        <rect key="frame" x="0.0" y="85.333333333333314" width="82.333333333333329" height="18.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="15"/>
+                                        <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONFIRM PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yy-gU-gI9">
+                                        <rect key="frame" x="0.0" y="170.66666666666669" width="151.66666666666666" height="18.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="15"/>
+                                        <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ZgV-2F-IGb" firstAttribute="top" secondItem="5b0-eG-Vhm" secondAttribute="bottom" constant="63" id="0mR-ZW-Dvh"/>
-                            <constraint firstItem="LIb-mO-5rf" firstAttribute="top" secondItem="0yy-gU-gI9" secondAttribute="bottom" constant="8.3300000000000001" id="DBu-uW-FMi"/>
                             <constraint firstItem="5b0-eG-Vhm" firstAttribute="centerX" secondItem="xOj-X1-SAE" secondAttribute="centerX" id="EEU-TN-DI4"/>
-                            <constraint firstItem="4bA-aq-cKD" firstAttribute="top" secondItem="5b0-eG-Vhm" secondAttribute="bottom" constant="63" id="N9w-8h-ee1"/>
-                            <constraint firstItem="vwk-W9-ZGA" firstAttribute="trailing" secondItem="4bA-aq-cKD" secondAttribute="trailing" constant="67" id="O9a-fn-Wyq"/>
-                            <constraint firstItem="6gZ-V3-ZHW" firstAttribute="top" secondItem="atk-CA-pfc" secondAttribute="bottom" constant="52.670000000000002" id="ZJo-Dj-1Xy"/>
-                            <constraint firstItem="atk-CA-pfc" firstAttribute="top" secondItem="w6i-t6-Z81" secondAttribute="bottom" constant="8.3300000000000001" id="cfT-ST-T7r"/>
-                            <constraint firstItem="LIb-mO-5rf" firstAttribute="top" secondItem="6gZ-V3-ZHW" secondAttribute="bottom" constant="52.670000000000002" id="cpf-Pm-onr"/>
-                            <constraint firstItem="6gZ-V3-ZHW" firstAttribute="top" secondItem="GQa-QL-EKg" secondAttribute="bottom" constant="8.3300000000000001" id="iw8-G0-X8J"/>
+                            <constraint firstItem="tnc-Lb-H16" firstAttribute="top" secondItem="5b0-eG-Vhm" secondAttribute="bottom" constant="63" id="EIZ-c9-zDz"/>
+                            <constraint firstItem="M5w-dm-t0k" firstAttribute="top" secondItem="xYy-TG-JH3" secondAttribute="bottom" constant="96" id="KGC-np-ZNi"/>
+                            <constraint firstItem="xYy-TG-JH3" firstAttribute="leading" secondItem="vwk-W9-ZGA" secondAttribute="leading" constant="76" id="PyQ-7a-LOH"/>
+                            <constraint firstItem="vwk-W9-ZGA" firstAttribute="trailing" secondItem="a5h-S8-Hm0" secondAttribute="trailing" constant="76" id="X2Q-Ao-P2e"/>
+                            <constraint firstItem="tnc-Lb-H16" firstAttribute="centerX" secondItem="xOj-X1-SAE" secondAttribute="centerX" id="aRu-nO-o1F"/>
+                            <constraint firstItem="a5h-S8-Hm0" firstAttribute="leading" secondItem="vwk-W9-ZGA" secondAttribute="leading" constant="76" id="cEb-Jx-VOG"/>
+                            <constraint firstItem="M5w-dm-t0k" firstAttribute="top" secondItem="a5h-S8-Hm0" secondAttribute="bottom" constant="54" id="duY-bi-3bq"/>
                             <constraint firstItem="5b0-eG-Vhm" firstAttribute="centerX" secondItem="xOj-X1-SAE" secondAttribute="centerX" id="kXy-Km-inH"/>
-                            <constraint firstItem="4bA-aq-cKD" firstAttribute="leading" secondItem="ZgV-2F-IGb" secondAttribute="trailing" constant="52" id="l4q-GG-Xvz"/>
+                            <constraint firstItem="M5w-dm-t0k" firstAttribute="centerX" secondItem="xOj-X1-SAE" secondAttribute="centerX" id="lsz-T6-uGz"/>
                             <constraint firstItem="5b0-eG-Vhm" firstAttribute="top" secondItem="M5w-dm-t0k" secondAttribute="bottom" constant="14" id="oRg-1v-vZD"/>
+                            <constraint firstItem="M5w-dm-t0k" firstAttribute="centerX" secondItem="xOj-X1-SAE" secondAttribute="centerX" id="ob5-SY-Lno"/>
+                            <constraint firstItem="vwk-W9-ZGA" firstAttribute="bottom" secondItem="tnc-Lb-H16" secondAttribute="bottom" constant="113" id="pOd-hy-GE9"/>
+                            <constraint firstItem="5b0-eG-Vhm" firstAttribute="top" secondItem="M5w-dm-t0k" secondAttribute="bottom" constant="17" id="xBc-Gc-t9A"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vwk-W9-ZGA"/>
                     </view>
@@ -541,7 +562,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Here? Join now " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlZ-VR-A2o">
-                                <rect key="frame" x="137" y="653" width="140" height="19"/>
+                                <rect key="frame" x="137" y="653" width="140" height="18.333333333333371"/>
                                 <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="15"/>
                                 <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -552,29 +573,33 @@
                                 <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQS-Rx-BEg">
-                                <rect key="frame" x="75" y="455" width="83" height="19"/>
-                                <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="15"/>
-                                <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sz0-Ua-5I7">
-                                <rect key="frame" x="75" y="368.33333333333331" width="44" height="19"/>
-                                <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="15"/>
-                                <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="67" translatesAutoresizingMaskIntoConstraints="NO" id="whP-5u-ESK">
+                                <rect key="frame" x="75" y="368.66666666666669" width="82.333333333333314" height="103.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sz0-Ua-5I7">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="18.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="15"/>
+                                        <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQS-Rx-BEg">
+                                        <rect key="frame" x="0.0" y="85.333333333333314" width="82.333333333333329" height="18.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="15"/>
+                                        <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="C6d-T0-190" firstAttribute="trailing" secondItem="Ifn-wQ-53v" secondAttribute="trailing" constant="76" id="2u0-WH-e4b"/>
                             <constraint firstItem="NlZ-VR-A2o" firstAttribute="centerX" secondItem="Ipc-M2-Qzx" secondAttribute="centerX" id="3bL-C3-fQn"/>
-                            <constraint firstItem="Ifn-wQ-53v" firstAttribute="top" secondItem="Sz0-Ua-5I7" secondAttribute="bottom" constant="8.3300000000000001" id="CpO-JR-Qx0"/>
-                            <constraint firstItem="oyL-DD-Pkh" firstAttribute="top" secondItem="GQS-Rx-BEg" secondAttribute="bottom" constant="8.3300000000000001" id="Fkr-KD-Dt3"/>
                             <constraint firstItem="pJo-Of-XQq" firstAttribute="centerX" secondItem="Ipc-M2-Qzx" secondAttribute="centerX" id="IY7-dI-tJ4"/>
                             <constraint firstItem="gNp-x4-BwP" firstAttribute="top" secondItem="C6d-T0-190" secondAttribute="top" constant="498" id="KHo-XH-dQo"/>
                             <constraint firstItem="Ifn-wQ-53v" firstAttribute="leading" secondItem="C6d-T0-190" secondAttribute="leading" constant="75" id="LOX-EW-GcP"/>
                             <constraint firstItem="pJo-Of-XQq" firstAttribute="top" secondItem="oyL-DD-Pkh" secondAttribute="bottom" constant="14" id="PhL-Kx-Q0t"/>
+                            <constraint firstItem="whP-5u-ESK" firstAttribute="leading" secondItem="C6d-T0-190" secondAttribute="leading" constant="75" id="QQw-Hh-Rxm"/>
                             <constraint firstItem="C6d-T0-190" firstAttribute="trailing" secondItem="oyL-DD-Pkh" secondAttribute="trailing" constant="76" id="UHb-hQ-bGJ"/>
                             <constraint firstItem="C6d-T0-190" firstAttribute="trailing" secondItem="hpv-Gm-LYG" secondAttribute="trailing" constant="147" id="Xyq-B0-8Ex"/>
                             <constraint firstItem="NlZ-VR-A2o" firstAttribute="top" secondItem="gNp-x4-BwP" secondAttribute="bottom" constant="14" id="Y4p-XU-qGC"/>
@@ -583,6 +608,7 @@
                             <constraint firstItem="hpv-Gm-LYG" firstAttribute="centerX" secondItem="Ipc-M2-Qzx" secondAttribute="centerX" id="bf3-80-rrT"/>
                             <constraint firstItem="gNp-x4-BwP" firstAttribute="leading" secondItem="C6d-T0-190" secondAttribute="leading" constant="67" id="bzr-0p-XUC"/>
                             <constraint firstItem="gNp-x4-BwP" firstAttribute="top" secondItem="pJo-Of-XQq" secondAttribute="bottom" constant="40" id="d2A-DZ-Y3Y"/>
+                            <constraint firstItem="oyL-DD-Pkh" firstAttribute="top" secondItem="whP-5u-ESK" secondAttribute="bottom" constant="10" id="eIn-Tu-H4a"/>
                             <constraint firstItem="hpv-Gm-LYG" firstAttribute="top" secondItem="C6d-T0-190" secondAttribute="top" constant="81" id="eNg-3X-1NA"/>
                             <constraint firstItem="oyL-DD-Pkh" firstAttribute="leading" secondItem="C6d-T0-190" secondAttribute="leading" constant="75" id="eZe-GK-3b8"/>
                             <constraint firstItem="gNp-x4-BwP" firstAttribute="centerX" secondItem="Ipc-M2-Qzx" secondAttribute="centerX" id="kXO-vg-JGf"/>
@@ -621,14 +647,14 @@
             <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="WwT-Lu-01g"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Background Image" width="414" height="896"/>
         <image name="Button" width="96" height="20.333333969116211"/>
         <image name="Logo" width="120" height="133"/>
         <image name="homeGraphic" width="213" height="413.66665649414062"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="WwT-Lu-01g"/>
+    </inferredMetricsTieBreakers>
 </document>
