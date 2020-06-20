@@ -8,14 +8,12 @@
 
 import UIKit
 import Firebase
-import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
     
     
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
-    @IBOutlet weak var fbSignin: FBLoginButton!
     
 
     override func viewDidLoad() {
@@ -24,15 +22,6 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func loginButton(_ fbSignin: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-      if let error = error {
-        print(error.localizedDescription)
-        return
-      } else {
-        performSegue(withIdentifier: "LoginToHabits", sender: self)
-    }
-      // ...
-    }
 
     @IBAction func loginPressed(_ sender: UIButton) {
         if let email = emailTextfield.text, let password = passwordTextfield.text{

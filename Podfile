@@ -9,7 +9,6 @@ target 'buddy' do
 pod 'Firebase/Auth'	
 pod 'Firebase/Firestore'
 pod 'SwipeCellKit'
-pod 'FBSDKLoginKit'
 
 
 end

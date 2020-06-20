@@ -9,7 +9,6 @@
 import UIKit
 import CoreData
 import Firebase
-import FBSDKCoreKit
 
 
 @UIApplicationMain
@@ -19,45 +18,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        return true
         
         
-        ApplicationDelegate.shared.application(
-                application,
-                didFinishLaunchingWithOptions: launchOptions
-            )
+//        ApplicationDelegate.shared.application(
+//                application,
+//                didFinishLaunchingWithOptions: launchOptions
+//            )
 
             return true
         }
               
-        func application(
-            _ app: UIApplication,
-            open url: URL,
-            options: [UIApplication.OpenURLOptionsKey : Any] = [:]
-        ) -> Bool {
+//        func application(
+//            _ app: UIApplication,
+//            open url: URL,
+//            options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+//        ) -> Bool {
+//
+//        ApplicationDelegate.shared.application(
+//                app,
+//                open: url,
+//                sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+//                annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+//            )
+//        }
+//
 
-        ApplicationDelegate.shared.application(
-                app,
-                open: url,
-                sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
-                annotation: options[UIApplication.OpenURLOptionsKey.annotation]
-            )
-        }
-    
-
-        //  SceneDelegate.swift
 
         func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-            guard let url = URLContexts.first?.url else {
-                return
-            }
+//            guard let url = URLContexts.first?.url else {
+//                return
+//            }
 
-            ApplicationDelegate.shared.application(
-                UIApplication.shared,
-                open: url,
-                sourceApplication: nil,
-                annotation: [UIApplication.OpenURLOptionsKey.annotation]
-            )
+//            ApplicationDelegate.shared.application(
+//                UIApplication.shared,
+//                open: url,
+//                sourceApplication: nil,
+//                annotation: [UIApplication.OpenURLOptionsKey.annotation]
+//            )
         }
 
     }

@@ -132,7 +132,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bA-aq-cKD" customClass="FBSDKLoginButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bA-aq-cKD">
                                         <rect key="frame" x="162" y="0.0" width="110" height="44"/>
                                         <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -223,8 +223,6 @@
                     <connections>
                         <outlet property="LoginToggle" destination="5b0-eG-Vhm" id="F42-wM-edg"/>
                         <outlet property="emailTextfield" destination="aad-Ez-GBF" id="why-pk-wFQ"/>
-                        <outlet property="fbSignin" destination="4bA-aq-cKD" id="BgI-Qb-ylx"/>
-                        <outlet property="ft" destination="4bA-aq-cKD" id="vo7-rs-1Fl"/>
                         <outlet property="passwordTextfield" destination="4f4-W1-UUA" id="6Up-5Q-wnz"/>
                         <segue destination="8DN-Ub-kda" kind="show" identifier="SignupToCode" id="7U1-6e-E89"/>
                         <segue destination="2Db-ar-Wuo" kind="show" identifier="SignupToHabits" id="L6Y-60-Lyk"/>
@@ -308,30 +306,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvC-8z-7wa">
-                                <rect key="frame" x="54" y="287" width="339" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTER CODE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvC-8z-7wa">
+                                <rect key="frame" x="75" y="362" width="158" height="31"/>
+                                <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="25"/>
+                                <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYC-MN-VKf">
-                                <rect key="frame" x="154" y="478" width="111" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
-                                <state key="normal" title="Enter"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jUk-Ph-gY8">
+                                <rect key="frame" x="75" y="423" width="264" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9a3-qx-rgt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYC-MN-VKf">
+                                <rect key="frame" x="75" y="552" width="264" height="50"/>
+                                <state key="normal" title="ENTER" backgroundImage="Button"/>
                                 <connections>
                                     <action selector="enterPressed:" destination="bC7-ur-Gok" eventType="touchUpInside" id="R6H-yg-yf7"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jUk-Ph-gY8">
-                                <rect key="frame" x="107" y="396" width="200" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jUk-Ph-gY8" firstAttribute="leading" secondItem="xHR-Z3-DXr" secondAttribute="leading" constant="75" id="7OI-Y1-GU8"/>
+                            <constraint firstItem="xHR-Z3-DXr" firstAttribute="bottom" secondItem="DYC-MN-VKf" secondAttribute="bottom" constant="260" id="Cny-Cs-546"/>
+                            <constraint firstItem="jUk-Ph-gY8" firstAttribute="centerY" secondItem="bAI-Wb-oF8" secondAttribute="centerY" id="DvD-mM-5g2"/>
+                            <constraint firstItem="dvC-8z-7wa" firstAttribute="leading" secondItem="xHR-Z3-DXr" secondAttribute="leading" constant="75" id="FJF-mv-Oz5"/>
+                            <constraint firstItem="xHR-Z3-DXr" firstAttribute="trailing" secondItem="DYC-MN-VKf" secondAttribute="trailing" constant="75" id="XID-Lc-DKf"/>
+                            <constraint firstItem="jUk-Ph-gY8" firstAttribute="top" secondItem="dvC-8z-7wa" secondAttribute="bottom" constant="30" id="anD-gO-zCs"/>
+                            <constraint firstItem="jUk-Ph-gY8" firstAttribute="centerX" secondItem="bAI-Wb-oF8" secondAttribute="centerX" id="bPd-QQ-W9q"/>
+                            <constraint firstItem="DYC-MN-VKf" firstAttribute="centerX" secondItem="bAI-Wb-oF8" secondAttribute="centerX" id="f6t-4P-DAE"/>
+                            <constraint firstItem="DYC-MN-VKf" firstAttribute="top" secondItem="jUk-Ph-gY8" secondAttribute="bottom" constant="79" id="jjb-4q-hMh"/>
+                            <constraint firstItem="DYC-MN-VKf" firstAttribute="leading" secondItem="xHR-Z3-DXr" secondAttribute="leading" constant="75" id="lFn-RG-gmB"/>
+                            <constraint firstItem="xHR-Z3-DXr" firstAttribute="trailing" secondItem="jUk-Ph-gY8" secondAttribute="trailing" constant="75" id="qK3-Gf-xRU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xHR-Z3-DXr"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZOV-nQ-3BX"/>
@@ -342,7 +352,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HX9-gY-8Mf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3643" y="951"/>
+            <point key="canvasLocation" x="3642.0289855072465" y="950.89285714285711"/>
         </scene>
         <!--Give Code View Controller-->
         <scene sceneID="NOH-t2-ffM">
@@ -352,22 +362,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTB-ew-8wG">
-                                <rect key="frame" x="93" y="360" width="228" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XZ02S5T" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aF7-Pg-EGe">
+                                <rect key="frame" x="75" y="410" width="264" height="76"/>
+                                <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="63"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="XZ02S5T" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aF7-Pg-EGe">
-                                <rect key="frame" x="106" y="465" width="202" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEJ-ZC-sgA">
+                                <rect key="frame" x="240" y="581" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
-                                <nil key="textColor"/>
+                                <state key="normal" title="Enter" image="Button"/>
+                                <connections>
+                                    <action selector="enterPressed:" destination="bC7-ur-Gok" eventType="touchUpInside" id="guy-gf-4Cc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHg-1X-Qhg">
+                                <rect key="frame" x="75" y="614" width="264" height="50"/>
+                                <state key="normal" title="ENTER" backgroundImage="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR CODE IS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTB-ew-8wG">
+                                <rect key="frame" x="75" y="371" width="180" height="31"/>
+                                <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="25"/>
+                                <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aF7-Pg-EGe" firstAttribute="top" secondItem="TTB-ew-8wG" secondAttribute="bottom" constant="8" id="3l1-TH-1Ed"/>
+                            <constraint firstItem="aF7-Pg-EGe" firstAttribute="centerX" secondItem="BDw-2O-6GJ" secondAttribute="centerX" id="6QF-ih-mE9"/>
+                            <constraint firstItem="TTB-ew-8wG" firstAttribute="leading" secondItem="75M-9w-jbh" secondAttribute="leading" constant="75" id="Hfn-NP-6E3"/>
+                            <constraint firstItem="75M-9w-jbh" firstAttribute="bottom" secondItem="VHg-1X-Qhg" secondAttribute="bottom" constant="198" id="fXq-yd-NTm"/>
+                            <constraint firstItem="75M-9w-jbh" firstAttribute="trailing" secondItem="VHg-1X-Qhg" secondAttribute="trailing" constant="75" id="fvl-Mx-Ovb"/>
+                            <constraint firstItem="VHg-1X-Qhg" firstAttribute="top" secondItem="aF7-Pg-EGe" secondAttribute="bottom" constant="128" id="kb5-kC-sRs"/>
+                            <constraint firstItem="aF7-Pg-EGe" firstAttribute="centerY" secondItem="BDw-2O-6GJ" secondAttribute="centerY" id="l1s-iQ-N4P"/>
+                            <constraint firstItem="VHg-1X-Qhg" firstAttribute="leading" secondItem="75M-9w-jbh" secondAttribute="leading" constant="75" id="rS8-QY-E1N"/>
+                            <constraint firstItem="VHg-1X-Qhg" firstAttribute="centerX" secondItem="BDw-2O-6GJ" secondAttribute="centerX" id="v7F-tU-5eq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="75M-9w-jbh"/>
                     </view>
                     <navigationItem key="navigationItem" id="aLJ-dx-hff"/>
@@ -560,7 +591,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9E-Fh-7WH" customClass="FBSDKLoginButton">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9E-Fh-7WH">
                                 <rect key="frame" x="233" y="724" width="110" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -630,7 +661,6 @@
                     <navigationItem key="navigationItem" id="w0z-ZY-YSL"/>
                     <connections>
                         <outlet property="emailTextfield" destination="Ifn-wQ-53v" id="5BI-8p-dgw"/>
-                        <outlet property="fbSignin" destination="N9E-Fh-7WH" id="dCT-U9-R2x"/>
                         <outlet property="passwordTextfield" destination="oyL-DD-Pkh" id="tLh-Aj-blH"/>
                         <segue destination="2Db-ar-Wuo" kind="show" identifier="LoginToHabits" id="WwT-Lu-01g"/>
                     </connections>
