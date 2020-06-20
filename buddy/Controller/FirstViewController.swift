@@ -13,58 +13,54 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var shadows = UIView()
-        shadows.frame = loginButton.frame
-        shadows.clipsToBounds = false
-        loginButton.addSubview(shadows)
-
-
-        
-        let shadowPath0 = UIBezierPath(roundedRect: shadows.bounds, cornerRadius: 360)
-
-               let loginButton = CALayer()
-
-               loginButton.shadowPath = shadowPath0.cgPath
-
-               loginButton.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
-
-               loginButton.shadowOpacity = 1
-
-               loginButton.shadowRadius = 4
-
-               loginButton.shadowOffset = CGSize(width: 4, height: 4)
-
-               loginButton.bounds = shadows.bounds
-
-               loginButton.position = shadows.center
-
-               shadows.layer.addSublayer(loginButton)
-        
-        
-        var shapes = UIView()
-        shapes.frame = view.frame
-        shapes.clipsToBounds = true
-        view.addSubview(shapes)
-
-
-        loginButton.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
-
-        loginButton.bounds = shapes.bounds
-
-        loginButton.position = shapes.center
-
-        shapes.layer.addSublayer(loginButton)
-
-
-        shapes.layer.cornerRadius = 360
-
-
+        let loginButton = CustomButton(type: .system)
+        loginButton.setTitle("Button", for: .normal)
+        view.addSubview(loginButton)
 
     }
+    
+}
 
+final class CustomButton: UIButton {
 
+    private var shadowLayer: CAShapeLayer!
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        if shadowLayer == nil {
+            shadowLayer = CAShapeLayer()
+            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 12).cgPath
+            shadowLayer.fillColor = UIColor.white.cgColor
+
+            shadowLayer.shadowColor = UIColor.darkGray.cgColor
+            shadowLayer.shadowPath = shadowLayer.path
+            shadowLayer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+            shadowLayer.shadowOpacity = 0.8
+            shadowLayer.shadowRadius = 2
+
+//            layer.insertSublayer(shadowLayer, at: 0)
+            layer.insertSublayer(shadowLayer, below: nil) // also works
+        }
+    }
+
+}
+
+    
+
+extension UIView {
+    @IBInspectable
+    var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+        }
+    }
 }
 

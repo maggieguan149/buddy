@@ -10,8 +10,15 @@ import UIKit
 
 class CodeViewController: UIViewController {
 
+    @IBOutlet weak var enterCode: UIButton!
+    @IBOutlet weak var createCode: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
 
         // Do any additional setup after loading the view.
     }
@@ -26,5 +33,5 @@ class CodeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
+
