@@ -42,6 +42,26 @@ class FirstViewController: UIViewController {
                loginButton.position = shadows.center
 
                shadows.layer.addSublayer(loginButton)
+        
+        
+        var shapes = UIView()
+        shapes.frame = view.frame
+        shapes.clipsToBounds = true
+        view.addSubview(shapes)
+
+
+        loginButton.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+
+        loginButton.bounds = shapes.bounds
+
+        loginButton.position = shapes.center
+
+        shapes.layer.addSublayer(loginButton)
+
+
+        shapes.layer.cornerRadius = 360
+
+
 
     }
 
