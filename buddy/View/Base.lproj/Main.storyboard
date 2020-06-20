@@ -232,7 +232,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLh-IC-6PZ">
-                                <rect key="frame" x="67" y="376" width="280" height="34"/>
+                                <rect key="frame" x="67" y="376" width="280" height="33"/>
                                 <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="18"/>
                                 <state key="normal" title="Create Code">
                                     <color key="titleColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -541,7 +541,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Here? Join now " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlZ-VR-A2o">
-                                <rect key="frame" x="137" y="653" width="140" height="19"/>
+                                <rect key="frame" x="137" y="653" width="140" height="17.666666666666629"/>
                                 <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="15"/>
                                 <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -553,13 +553,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQS-Rx-BEg">
-                                <rect key="frame" x="75" y="455" width="83" height="19"/>
+                                <rect key="frame" x="75" y="456.33333333333331" width="83" height="17.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="15"/>
                                 <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sz0-Ua-5I7">
-                                <rect key="frame" x="75" y="368.33333333333331" width="44" height="19"/>
+                                <rect key="frame" x="75" y="369.66666666666669" width="44" height="17.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="15"/>
                                 <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
