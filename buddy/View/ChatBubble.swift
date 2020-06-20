@@ -9,10 +9,16 @@
 import UIKit
 
 class ChatBubble: UITableViewCell {
+    
+    @IBOutlet var sender: UIImageView!
+    @IBOutlet var leftSender: UIImageView!
+    @IBOutlet var label: UILabel!
+    @IBOutlet var messageBubble: UIView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        messageBubble.layer.cornerRadius = messageBubble.frame.size.height / 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
