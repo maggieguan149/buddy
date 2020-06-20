@@ -16,6 +16,13 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var shadows = UIView()
+        shadows.frame = loginButton.frame
+        shadows.clipsToBounds = false
+        loginButton.addSubview(shadows)
+
+
+        
         let shadowPath0 = UIBezierPath(roundedRect: shadows.bounds, cornerRadius: 360)
 
                let loginButton = CALayer()

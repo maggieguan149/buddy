@@ -28,7 +28,6 @@
                                 <rect key="frame" x="67" y="467" width="280" height="53"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="Frk-s6-O1c"/>
                                     <constraint firstAttribute="height" constant="53" id="frI-Nf-2Eu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="17"/>
@@ -50,6 +49,11 @@
                                 <state key="normal" title="LOG IN">
                                     <color key="titleColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9eu-vc-zO4"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="gvc-BU-dh7" kind="show" id="d1r-VA-oeV"/>
                                 </connections>
@@ -63,7 +67,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pa6-kD-ih6" secondAttribute="trailing" constant="67" id="LSy-x2-hhY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8BJ-nh-MO1" secondAttribute="trailing" constant="67" id="WL2-cB-JxQ"/>
                             <constraint firstItem="8BJ-nh-MO1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yjj-SG-3dy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pa6-kD-ih6" secondAttribute="bottom" constant="342" id="gUx-N6-7ea"/>
                             <constraint firstItem="Pa6-kD-ih6" firstAttribute="top" secondItem="8BJ-nh-MO1" secondAttribute="bottom" constant="38" id="mfi-HV-SZA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pa6-kD-ih6" secondAttribute="bottom" constant="350" id="no7-DX-vxq"/>
                             <constraint firstItem="Pa6-kD-ih6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ouS-IP-PMe"/>
@@ -125,6 +128,10 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgV-2F-IGb">
                                 <rect key="frame" x="75" y="724" width="110" height="44"/>
                                 <color key="backgroundColor" red="0.85882352941176465" green="0.26666666666666666" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="XAt-YF-t2R"/>
+                                    <constraint firstAttribute="width" constant="110" id="aQl-DK-iQs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="18"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -411,9 +418,8 @@
                                     <action selector="loginPressed:" destination="gvc-BU-dh7" eventType="touchUpInside" id="Ain-ec-B4s"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oyL-DD-Pkh">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oyL-DD-Pkh">
                                 <rect key="frame" x="86" y="461" width="250" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
@@ -451,12 +457,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="NlZ-VR-A2o" firstAttribute="top" secondItem="gNp-x4-BwP" secondAttribute="bottom" constant="14" id="1vT-iz-5Xc"/>
                             <constraint firstItem="NlZ-VR-A2o" firstAttribute="centerX" secondItem="Ipc-M2-Qzx" secondAttribute="centerX" id="3bL-C3-fQn"/>
-                            <constraint firstItem="gNp-x4-BwP" firstAttribute="leading" secondItem="C6d-T0-190" secondAttribute="leading" constant="67" id="53R-gS-TXx"/>
-                            <constraint firstItem="C6d-T0-190" firstAttribute="trailing" secondItem="gNp-x4-BwP" secondAttribute="trailing" constant="67" id="FX2-jC-J06"/>
+                            <constraint firstItem="gNp-x4-BwP" firstAttribute="top" secondItem="oyL-DD-Pkh" secondAttribute="bottom" constant="91" id="UDD-wI-X5s"/>
                             <constraint firstItem="C6d-T0-190" firstAttribute="trailing" secondItem="hpv-Gm-LYG" secondAttribute="trailing" constant="147" id="Xyq-B0-8Ex"/>
+                            <constraint firstItem="NlZ-VR-A2o" firstAttribute="top" secondItem="gNp-x4-BwP" secondAttribute="bottom" constant="14" id="Y4p-XU-qGC"/>
                             <constraint firstItem="hpv-Gm-LYG" firstAttribute="top" secondItem="C6d-T0-190" secondAttribute="top" constant="38" id="YS6-aW-aoL"/>
+                            <constraint firstItem="gNp-x4-BwP" firstAttribute="leading" secondItem="C6d-T0-190" secondAttribute="leading" constant="67" id="bzr-0p-XUC"/>
+                            <constraint firstItem="gNp-x4-BwP" firstAttribute="centerX" secondItem="Ipc-M2-Qzx" secondAttribute="centerX" id="kXO-vg-JGf"/>
                             <constraint firstItem="hpv-Gm-LYG" firstAttribute="leading" secondItem="C6d-T0-190" secondAttribute="leading" constant="147" id="swP-1k-NtV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C6d-T0-190"/>
