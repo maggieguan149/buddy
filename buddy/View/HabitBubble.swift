@@ -12,11 +12,12 @@ class HabitBubble: UITableViewCell {
 
     @IBOutlet weak var habitLabel: UILabel!
     @IBOutlet weak var streakLabel: UILabel!
+    @IBOutlet var lavenderView: UIView!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        lavenderView.layer.cornerRadius = lavenderView.frame.size.height / 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

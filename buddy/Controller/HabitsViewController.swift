@@ -29,6 +29,9 @@ class HabitsViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.rowHeight = 65
+        
+        navigationItem.hidesBackButton = true
         
         tableView.register(UINib(nibName: "HabitBubble", bundle: .none), forCellReuseIdentifier: "HabitCell")
         

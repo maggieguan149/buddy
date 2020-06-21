@@ -25,7 +25,7 @@ class ChatViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         navigationItem.title = "Buddy"
-        navigationItem.hidesBackButton = true
+//        navigationItem.hidesBackButton = true
         
         tableView.rowHeight = 65
         

@@ -17,38 +17,45 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let loginButton = CustomButton(type: .system)
-        loginButton.setTitle("Button", for: .normal)
-        view.addSubview(loginButton)
-
+//        let loginButton = CustomButton(type: .system)
+//        loginButton.setTitle("Button", for: .normal)
+//        view.addSubview(loginButton)
+        navigationController?.isNavigationBarHidden = true
+        
+        loginButton.layer.cornerRadius = loginButton.frame.size.height / 5
+        signupButton.layer.cornerRadius = signupButton.frame.size.height / 5
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
     }
     
 }
 
-final class CustomButton: UIButton {
+//final class CustomButton: UIButton {
 
-    private var shadowLayer: CAShapeLayer!
+//    private var shadowLayer: CAShapeLayer!
 
-    override func layoutSubviews() {
-        super.layoutSubviews()
-
-        if shadowLayer == nil {
-            shadowLayer = CAShapeLayer()
-            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 12).cgPath
-            shadowLayer.fillColor = UIColor.white.cgColor
-
-            shadowLayer.shadowColor = UIColor.darkGray.cgColor
-            shadowLayer.shadowPath = shadowLayer.path
-            shadowLayer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-            shadowLayer.shadowOpacity = 0.8
-            shadowLayer.shadowRadius = 2
-
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//
+//        if shadowLayer == nil {
+//            shadowLayer = CAShapeLayer()
+//            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 12).cgPath
+//            shadowLayer.fillColor = UIColor.white.cgColor
+//
+//            shadowLayer.shadowColor = UIColor.darkGray.cgColor
+//            shadowLayer.shadowPath = shadowLayer.path
+//            shadowLayer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+//            shadowLayer.shadowOpacity = 0.8
+//            shadowLayer.shadowRadius = 2
+//
 //            layer.insertSublayer(shadowLayer, at: 0)
-            layer.insertSublayer(shadowLayer, below: nil) // also works
-        }
-    }
+//            layer.insertSublayer(shadowLayer, below: nil) // also works
+//        }
+//    }
 
-}
+//}
 
     
 
