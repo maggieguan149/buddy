@@ -8,7 +8,6 @@ target 'buddy' do
   # Pods for buddy
 pod 'Firebase/Auth'	
 pod 'Firebase/Firestore'
-pod 'SwipeCellKit'
 
 
 end
