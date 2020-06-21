@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vRY-B0-ATA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vRY-B0-ATA">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -39,7 +39,7 @@
                                     <color key="titleColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="OOB-XC-z8C" kind="show" id="ldA-jV-t3k"/>
+                                    <segue destination="OOB-XC-z8C" kind="show" id="lqV-hj-vbf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BJ-nh-MO1">
@@ -484,7 +484,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0H-xu-3l5">
-                                <rect key="frame" x="102.66666666666669" y="71" width="209" height="51"/>
+                                <rect key="frame" x="104.00000000000001" y="71" width="206.33333333333337" height="49"/>
                                 <fontDescription key="fontDescription" name="Carme" family="Carme" pointSize="42"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -796,11 +796,6 @@
             <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="WwT-Lu-01g"/>
-        <segue reference="ldA-jV-t3k"/>
-    </inferredMetricsTieBreakers>
-    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Background Image" width="414" height="896"/>
         <image name="BackgroundGradient" width="414" height="896"/>
@@ -816,9 +811,14 @@
         <image name="bottomnav" width="414" height="87"/>
         <image name="comment" width="39" height="39"/>
         <image name="homeGraphic" width="213" height="413.66665649414062"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
         <image name="squiggle" width="396" height="670"/>
         <image name="task 1" width="414" height="486"/>
         <image name="user" width="49" height="44"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="WwT-Lu-01g"/>
+        <segue reference="lqV-hj-vbf"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
