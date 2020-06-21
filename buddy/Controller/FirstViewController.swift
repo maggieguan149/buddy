@@ -20,6 +20,7 @@ class FirstViewController: UIViewController {
 //        let loginButton = CustomButton(type: .system)
 //        loginButton.setTitle("Button", for: .normal)
 //        view.addSubview(loginButton)
+        
         navigationController?.isNavigationBarHidden = true
         
         loginButton.layer.cornerRadius = loginButton.frame.size.height / 5
@@ -33,9 +34,9 @@ class FirstViewController: UIViewController {
 }
 
 //final class CustomButton: UIButton {
-
+//
 //    private var shadowLayer: CAShapeLayer!
-
+//
 //    override func layoutSubviews() {
 //        super.layoutSubviews()
 //
@@ -54,10 +55,9 @@ class FirstViewController: UIViewController {
 //            layer.insertSublayer(shadowLayer, below: nil) // also works
 //        }
 //    }
-
+//
 //}
-
-    
+//
 
 extension UIView {
     @IBInspectable

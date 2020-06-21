@@ -14,12 +14,15 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var google: UIButton!
+    @IBOutlet weak var facebook: UIButton!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        google.layer.cornerRadius = google.frame.size.height / 5
+        facebook.layer.cornerRadius = facebook.frame.size.height / 5
     }
     
 
